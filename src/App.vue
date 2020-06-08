@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand">Regular Show</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-info btn-search my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </nav>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Chelsea Market', cursive;
+  color: #FFF;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn-search {
+  padding: 1em;
+  border-radius: 2em;
 }
 </style>
